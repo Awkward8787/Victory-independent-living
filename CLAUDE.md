@@ -149,6 +149,12 @@ npm run build
 # Upload contents of /dist to your hosting public_html
 ```
 
+## Git Workflow
+**Always commit and push after every change.**
+- Remote: https://github.com/Awkward8787/Victory-independent-living
+- Branch: `main`
+- After making any edits, stage → commit → push in the same session. No exceptions.
+
 ---
 
 ## Current TODOs
