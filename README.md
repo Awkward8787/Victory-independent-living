@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/banner.png" alt="Victory Independent Living" width="100%">
+  <img src="assets/banner.png" alt="Victory Independent Living" width="100%">
 </p>
 
 # Victory Independent Living
@@ -12,6 +12,19 @@
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6&logo=typescript&logoColor=white)
 
 Spearheaded by Valisa Jones and Anthony Jones. Lead capture for tenants (`/apply`) and partners (`/partners`), plus contact and resources pages. Formspree endpoints still need real form IDs in `config.ts`.
+
+
+## How it works
+
+```mermaid
+flowchart LR
+  T[Tenant] --> Apply[/apply]
+  P[Partner] --> Partners[/partners]
+  Apply --> FS[Formspree]
+  Partners --> FS
+```
+
+Lead capture for housing intake and partner recruitment in Valdosta. Formspree IDs still need real values in `config.ts`.
 
 ## Features
 
