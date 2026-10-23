@@ -1,47 +1,52 @@
-# Victory Independent Living Web App
+<p align="center">
+  <img src="docs/banner.png" alt="Victory Independent Living" width="100%">
+</p>
 
-A responsive React web application for housing intake and partner recruitment in Valdosta, GA.
+# Victory Independent Living
+
+**Web app for housing intake and partner recruitment in Valdosta, Georgia.**
+
+[![License: All Rights Reserved](https://img.shields.io/badge/license-all%20rights%20reserved-lightgrey)](#license)
+![Vite](https://img.shields.io/badge/Vite-646CFF&logo=vite&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB&logo=react&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6&logo=typescript&logoColor=white)
+
+Spearheaded by Valisa Jones and Anthony Jones. Lead capture for tenants (`/apply`) and partners (`/partners`), plus contact and resources pages. Formspree endpoints still need real form IDs in `config.ts`.
 
 ## Features
 
-- **Lead Capture**: Directed flows for Tenants (`/apply`) and Partners (`/partners`).
-- **Google Forms Integration**: Embeds and links with automatic UTM parameter appending.
-- **AI Local Insights**: Powered by Google Gemini (Search & Maps) to help users find local resources.
-- **Responsive UI**: Built with Tailwind CSS for mobile and desktop.
+- HashRouter static build for Hostinger / any static host
+- Tenant and partner flows with UTM helpers
+- Optional Gemini "Local Insights" when `VITE_GEMINI_API_KEY` is set
+- Contact details in `config.ts`
 
-## Configuration
+## Tech stack
 
-1.  **Google Forms**: Open `src/config.ts` and replace the placeholder URLs with your actual Google Form links.
-    ```typescript
-    export const APPLY_FORM_URL = "YOUR_TENANT_FORM_URL";
-    export const PARTNER_FORM_URL = "YOUR_PARTNER_FORM_URL";
-    ```
-2.  **Contact Info**: Update `src/config.ts` with your email and phone number.
+- Vite + React + TypeScript
+- React Router (HashRouter)
+- lucide-react
+- Optional Google Gemini
 
-## Gemini API Setup
-
-To enable the "Local Insights" AI features:
-
-1.  Get an API Key from [Google AI Studio](https://aistudio.google.com/).
-2.  Create a `.env` file in the project root.
-3.  Add the key:
-    ```
-    VITE_GEMINI_API_KEY=your_api_key_here
-    ```
-
-## Development
+## How to run
 
 ```bash
-# Install dependencies
 npm install
-
-# Run development server
 npm run dev
+npm run build
 ```
 
-## Deployment
+Upload `dist/` to the host. Set Formspree endpoints and contact fields in `config.ts`. Optional: `VITE_GEMINI_API_KEY` for Local Insights.
 
-This app uses `HashRouter`, making it compatible with any static hosting provider (Hostinger, Apache, GitHub Pages, Netlify) without complex server configuration.
+## Environment variables
 
-1.  Build the app: `npm run build`
-2.  Upload the contents of the `dist` folder to your public_html or web root.
+Names only. Never commit values.
+
+- `VITE_GEMINI_API_KEY`
+
+## Status
+
+Public. Formspree endpoints are still placeholders (`REPLACE_WITH_YOUR_*`).
+
+## License
+
+All rights reserved.
